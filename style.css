@@ -1,0 +1,57 @@
+<style>
+/*
+-이런 식으로 css file을 만들어두면, 수많은 페이지를 직접 다 바꾸지 않아도 됨
+-또한, 웹사이트를 불러올 때도 경제적, 시간적 효율성 증가
+-css file읆 만들어주면 캐시 파일을 우리 컴퓨터에 저장해뒀다가, 이후 css파일을 이용할
+일이 있을때, '네트워크를 사용해 다운로드하지 않고' 컴퓨터에서 불러옴
+*/
+
+ a {
+   color:blue;
+
+   text-decoration:none;
+ }
+
+ h1{
+   font-size: 45px;
+   text-align:center;
+   border-bottom: 1px solid gray;
+   margin: 0;
+   padding: 20px;
+  }
+
+  ol{
+    border-right: 1px gray solid;
+    width:100px;
+    margin:0;
+    padding:0;
+  }
+
+  body{
+    margin:0;
+  }
+
+  #grid{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+  #grid ol{ /* grid라는 id 값 밑의 ol 을 의미*/
+  padding-left:33px;
+  }
+  #grid #article{
+  padding-left:25px;
+  }
+
+  @media(max-width:800px){
+    #grid{
+      display: block;
+    }
+    ol{
+      border-right: none;
+    }
+    h1{
+   border-bottom: none;
+    }
+  }
+
+</style>
